@@ -1,11 +1,10 @@
-from flask import Flask, jsonify
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return jsonify({"message": "Hello from Flask on Vercel!"})
+def hello_world():
+    return 'Hello, World!'
 
-# Wajib! Agar Vercel tahu fungsi handler-nya
-def handler(environ, start_response):
-    return app(environ, start_response)
+if __name__ == '__main__':
+    app.run(debug=True)
