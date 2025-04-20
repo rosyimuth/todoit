@@ -6,6 +6,6 @@ app = Flask(__name__)
 def index():
     return jsonify({"message": "Hello from Flask on Vercel!"})
 
+# Wajib! Agar Vercel tahu fungsi handler-nya
 def handler(environ, start_response):
-    # Pastikan app.wsgi_app yang digunakan untuk handler
-    return app.wsgi_app(environ, start_response)
+    return app(environ, start_response)
