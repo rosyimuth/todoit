@@ -6,6 +6,6 @@ app = Flask(__name__)
 def home():
     return "Hello from Flask & Vercel!"
 
-# Untuk handler Vercel
+# WAJIB ada untuk Vercel:
 def handler(environ, start_response):
     return app(environ, start_response)
