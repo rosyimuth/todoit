@@ -9,6 +9,3 @@ def todoit():
         # Mengirim data ke template untuk ditampilkan
         return render_template('index.html', data=data)
     return render_template('index.html', data=None)  # Jika GET, kirim None untuk data
-
-if __name__ == '__main__':
-    app.run(debug=True)
